@@ -2,10 +2,10 @@
 /**
  * gl_rotr - Rotates the top stack to the bottom
  * @head: Stack head
- * @counnt: Number line 
- * @Return: 0
+ * @count: Number line
+ * Return: 0
  */
-void gl_rotr(stack_t **head, __attribute__((unused)) unsigned int count)
+void gl_rotr(stack_t **head, __attribute__((unused))__ unsigned int count)
 {
 	stack_t *CPY;
 

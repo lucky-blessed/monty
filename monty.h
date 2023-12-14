@@ -81,3 +81,5 @@ void gl_queue(stack_t **head, unsigned int count);
 void gl_stack(stack_t **head, unsigned int count);
 void gl_add_queue(stack_t **head, int n);
 void gl_queue(stack_t **head, unsigned int count);
+void gl_add_node(stack_t **head, int n);
+#endif
