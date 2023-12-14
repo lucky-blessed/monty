@@ -24,7 +24,7 @@
  *
  * Description:  opcode and its function
  * for stack, queues, LIFO, FIFO, Holberton project
- */ 
+ */
 typedef struct stack_s
 {
 	int n;
@@ -43,15 +43,15 @@ typedef struct stack_s
 typedef struct instruction_s
 {
 	char *opcode;
-	void (*f) (stack_t **stack, unsigned int line_number);
+	void (*f)(stack_t **stack, unsigned int line_number);
 } instruction_t;
-
 
 /**
  * struct box_s - variable -args, file, line content
  * @arg: value
  * @file: Pointer to monty file
  * @lifi: flag change stack <-> queue
+ * @content: content
  * Description: Carries value
  */
 typedef struct box_s
@@ -70,3 +70,10 @@ void gl_swap(stack_t **head, unsigned int count);
 void gl_add(stack_t **head, unsigned int count);
 void gl_nop(stack_t **head, unsigned int count);
 void gl_sub(stack_t **head, unsigned int count);
+void gl_div(stack_t **head, unsigned int count);
+void gl_mul(stack_t **head, unsigned int count);
+void gl_mod(stack_t **head, unsigned int count);
+void f_pchar(stack_t **head, unsigned int count);
+void f_pstr(stack_t **head, unsigned int count);
+void f_rotl(stack_t **head, unsigned int count);
+void f_rotr(stack_t **head, __attribute__((unused)) unsigned int count);
