@@ -50,7 +50,7 @@ typedef struct instruction_s
  * struct box_s - variable -args, file, line content
  * @arg: value
  * @file: Pointer to monty file
- * @lifi: flag change stack <-> queue
+ * @LIFO: flag change stack <-> queue
  * @content: content
  * Description: Carries value
  */
@@ -59,7 +59,7 @@ typedef struct box_s
 	char *arg;
 	FILE *file;
 	char *content;
-	int lifi;
+	int LIFO;
 } box_t;
 extern box_t box;
 
@@ -77,3 +77,7 @@ void f_pchar(stack_t **head, unsigned int count);
 void f_pstr(stack_t **head, unsigned int count);
 void f_rotl(stack_t **head, unsigned int count);
 void f_rotr(stack_t **head, __attribute__((unused)) unsigned int count);
+void gl_queue(stack_t **head, unsigned int count);
+void gl_stack(stack_t **head, unsigned int count);
+void gl_add_queue(stack_t **head, int n);
+void gl_queue(stack_t **head, unsigned int count);
