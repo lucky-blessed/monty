@@ -67,3 +67,6 @@ void gl_push(stack_t **head, unsigned int num);
 void gl_pall(stack_t **head);
 void gl_pop(stack_t **head, unsigned int count);
 void gl_swap(stack_t **head, unsigned int count);
+void gl_add(stack_t **head, unsigned int count);
+void gl_nop(stack_t **head, unsigned int count);
+void gl_sub(stack_t **head, unsigned int count);
