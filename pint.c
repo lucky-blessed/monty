@@ -8,7 +8,7 @@ void gl_pint(stack_t **head, unsigned int count)
 {
 	if (*head == NULL)
 	{
-		fprintf(stderr, "L%u: cannot pint, stack empty\n", count);
+		fprintf(stderr, "L%u: can't pint, stack empty\n", count);
 		fclose(box.file);
 		free(box.content);
 		free_stack(*head);
