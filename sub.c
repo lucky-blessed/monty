@@ -1,6 +1,6 @@
 #include "monty.h"
 /**
- * gl_sub - Subracts the topmost element of the stack from the next\
+ * gl_sub - Subracts the topmost element of the stack from the next
  * @head: stack head
  * @count: number line counter
  */
