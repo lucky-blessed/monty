@@ -64,4 +64,6 @@ typedef struct box_s
 extern box_t box;
 
 void gl_push(stack_t **head, unsigned int num);
-void gl_pall(stack_t **head)
+void gl_pall(stack_t **head);
+void gl_pop(stack_t **head, unsigned int count);
+void gl_swap(stack_t **head, unsigned int count);

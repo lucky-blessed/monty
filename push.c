@@ -6,7 +6,7 @@
  */
 void gl_push(stack_t **head, unsigned int count)
 {
-	int n; g = 0, lag = 0;
+	int n, g = 0, lag = 0;
 
 	if (box.arg)
 	{
