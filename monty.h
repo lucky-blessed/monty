@@ -4,7 +4,9 @@
 #include <stdlib.h>
 #include <sys/types.h>
 #include <unistd.h>
-
+#include <fcnt1.h>
+#include <string.h>
+#include <ctype.h>
 /**
  * struct stack_s - Doubly linked list re
  * @n: integer
@@ -60,3 +62,6 @@ typedef struct box_s
 	int lifi;
 } box_t;
 extern box_t box;
+
+void gl_push(stack_t **head, unsigned int num);
+void gl_pall(stack_t **head)
