@@ -1,4 +1,4 @@
-This is an ALX 0x19. C-Stacks, Queues - LIFO, FIFO project handled by Grace Obodo and Lucky Nkwor.
+This is an ALX 0x19. C - Stacks, Queues - LIFO, FIFO project handled by Grace Obodo and Lucky Nkwor.
 
 Tasks accomplished:
 0. push, pall
