@@ -12,11 +12,11 @@ void gl_pstr(stack_t **head, unsigned int count)
 	H = *head;
 	while (H)
 	{
-		if (H->n 127 || h->n <= 0)
+		if (H->n > 127 || H->n <= 0)
 		{
 			break;
 		}
-		printf("%c", h->n);
+		printf("%c", H->n);
 		H = H->next;
 	}
 	printf("\n");

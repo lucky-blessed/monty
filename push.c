@@ -31,12 +31,12 @@ void gl_push(stack_t **head, unsigned int count)
 		fprintf(stderr, "L%d: usage: push integer\n", count);
 		fclose(box.file);
 		free(box.content);
-		free_stack(*head);
+		gl_stack(*head);
 		exit(EXIT_FAILURE);
 	}
 	n = atoi(box.arg);
-	if (box.lifi == 0)
-		addnode(head, n);
+	if (box.LIFO == 0)
+		gl_add_node(head, n);
 	else
-		addqueue(head, n);
-}
+		gl_add_queue(head, n);
+

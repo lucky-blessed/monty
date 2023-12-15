@@ -14,7 +14,7 @@ void gl_pchar(stack_t **head, unsigned int count)
 		fprintf(stderr, "L%d: can't pchar, stack empty\n", count);
 		fclose(box.file);
 		free(box.content);
-		free_stack(*head);
+		gl_stack(*head);
 		exit(EXIT_FAILURE);
 	}
 	if (H->n > 127 || H->n < 0)

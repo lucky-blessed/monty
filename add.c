@@ -4,10 +4,10 @@
  * @head: stack head
  * @count: count line number
  */
-void gl_add(stact_t **head, unsigned int count)
+void gl_add(stack_t **head, unsigned int count)
 {
 	stack_t *H;
-	int lent = 0, TEPM;
+	int lent = 0, TEMP;
 
 	H = *head;
 	while (H)
@@ -18,7 +18,7 @@ void gl_add(stact_t **head, unsigned int count)
 	if (lent < 2)
 	{
 		fclose(box.file);
-		free(box.count);
+		free(box.content);
 		free_stack(*head);
 		exit(EXIT_FAILURE);
 	}

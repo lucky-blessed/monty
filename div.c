@@ -20,16 +20,16 @@ void gl_div(stack_t **head, unsigned int count)
 		fprintf(stderr, "L%d: can't div, stack too short\n", count);
 		fclose(box.file);
 		free(box.content);
-		free_stack(*head);
+		gl_stack(*head);
 		exit(EXIT_FAILURE);
 	}
-	H = *next;
+	H = *head;
 	if (H->n == 0)
 	{
 		fprintf(stderr, "L%d: division by zero\n", count);
 		fclose(box.file);
 		free(box.content);
-		free_stack(*head);
+		gl_stack(*head);
 		exit(EXIT_FAILURE);
 	}
 	TEMP = H->next->n / H->n;

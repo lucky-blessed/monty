@@ -24,7 +24,7 @@ int gl_execute(char *content, stack_t **stack, unsigned int count, FILE *file)
 				{"rotl", gl_rotl},
 				{"rotr", gl_rotr},
 				{"queue", gl_queue},
-				{"stack", gl_stack},
+				{"stack", f_stack},
 				{NULL, NULL}
 				};
 	unsigned int i = 0;
@@ -46,7 +46,7 @@ int gl_execute(char *content, stack_t **stack, unsigned int count, FILE *file)
 	{ fprintf(stderr, "L%d: unknown instruction %s\n", count, op);
 		fclose(file);
 		free(content);
-		free_stack(*stack);
+		gl_stack(*stack);
 		exit(EXIT_FAILURE); }
 	return (1);
 }

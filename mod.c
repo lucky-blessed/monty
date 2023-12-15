@@ -20,7 +20,7 @@ void gl_mod(stack_t **head, unsigned int count)
 		fprintf(stderr, "L%d: can't mod, stack too short\n", count);
 		fclose(box.file);
 		free(box.content);
-		free_stack(*head);
+		gl_stack(*head);
 		exit(EXIT_FAILURE);
 	}
 	H = *head;
@@ -35,5 +35,5 @@ void gl_mod(stack_t **head, unsigned int count)
 	TEMP = H->next->n % H->n;
 	H->next->n = TEMP;
 	*head = H->next;
-	free(H);
+	free(H)
 }

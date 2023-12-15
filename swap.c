@@ -20,8 +20,8 @@ void gl_swap(stack_t **head, unsigned int count)
 		fprintf(stderr, "L%d: cant't swap, stack too short\n", count);
 		fclose(box.file);
 		free(box.content);
-		free_stack(*head)
-			exit(EXIT_FAILURE);
+		gl_stack(*head);
+		exit(EXIT_FAILURE);
 	}
 	H = *head;
 	TEMP = H->n;

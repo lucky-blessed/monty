@@ -4,7 +4,7 @@
 #include <stdlib.h>
 #include <sys/types.h>
 #include <unistd.h>
-#include <fcnt1.h>
+#include <fcntl.h>
 #include <string.h>
 #include <ctype.h>
 /**
@@ -73,13 +73,14 @@ void gl_sub(stack_t **head, unsigned int count);
 void gl_div(stack_t **head, unsigned int count);
 void gl_mul(stack_t **head, unsigned int count);
 void gl_mod(stack_t **head, unsigned int count);
-void f_pchar(stack_t **head, unsigned int count);
-void f_pstr(stack_t **head, unsigned int count);
-void f_rotl(stack_t **head, unsigned int count);
-void f_rotr(stack_t **head, __attribute__((unused)) unsigned int count);
+void gl_pchar(stack_t **head, unsigned int count);
+void gl_pstr(stack_t **head, unsigned int count);
+void gl_rotl(stack_t **head, unsigned int count);
+void gl_rotr(stack_t **head, __attribute__((unused)) unsigned int count);
 void gl_queue(stack_t **head, unsigned int count);
 void gl_stack(stack_t **head, unsigned int count);
 void gl_add_queue(stack_t **head, int n);
 void gl_queue(stack_t **head, unsigned int count);
 void gl_add_node(stack_t **head, int n);
+int gl_execute(char *content, stack_t **stack, unsigned int count, FILE *file)
 #endif

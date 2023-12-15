@@ -12,8 +12,8 @@ void gl_pop(stack_t **head, unsigned int count)
 	{
 		fprintf(stderr, "L%d: can't pop an empty stack\n", count);
 		fclose(box.file);
-		free(box.count);
-		free_stack(*head);
+		free(box.content);
+		gl_stack(*head);
 		exit(EXIT_FAILURE);
 	}
 	H = *head;
