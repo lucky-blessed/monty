@@ -1,11 +1,12 @@
 #include "monty.h"
 /**
- * gl_nop - Function that does nothing
- * @head: stack head
- * @count: Line counter
+  *f_nop- nothing
+  *@head: stack head
+  *@counter: line_number
+  *Return: no return
  */
-void gl_nop(stack_t **head, unsigned int count)
+void f_nop(stack_t **head, unsigned int counter)
 {
+	(void) counter;
 	(void) head;
-	(void) count;
 }
