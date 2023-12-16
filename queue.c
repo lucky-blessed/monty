@@ -1,48 +1,48 @@
 #include "monty.h"
 /**
- * gl_queue - prints the top
+ * f_queue - prints the top
  * @head: stack head
- * @count: line number counter
- * Return: 0
+ * @counter: line_number
+ * Return: no return
 */
-void gl_queue(stack_t **head, unsigned int count)
+void f_queue(stack_t **head, unsigned int counter)
 {
 	(void)head;
-	(void)count;
-	box.LIFO = 1;
+	(void)counter;
+	bus.lifi = 1;
 }
 
 /**
- * add_queue - add node to the tail stack
+ * addqueue - add node to the tail stack
  * @n: new_value
  * @head: head of the stack
- * Return: 0
+ * Return: no return
 */
-void gl_add_queue(stack_t **head, int n)
+void addqueue(stack_t **head, int n)
 {
-	stack_t *NODE_NEW, *X;
+	stack_t *new_node, *aux;
 
-	X = *head;
-	NODE_NEW = malloc(sizeof(stack_t));
-	if (NODE_NEW == NULL)
+	aux = *head;
+	new_node = malloc(sizeof(stack_t));
+	if (new_node == NULL)
 	{
 		printf("Error\n");
 	}
-	NODE_NEW->n = n;
-	NODE_NEW->next = NULL;
-	if (X)
+	new_node->n = n;
+	new_node->next = NULL;
+	if (aux)
 	{
-		while (X->next)
-			X = X->next;
+		while (aux->next)
+			aux = aux->next;
 	}
-	if (!X)
+	if (!aux)
 	{
-		*head = NODE_NEW;
-		NODE_NEW->prev = NULL;
+		*head = new_node;
+		new_node->prev = NULL;
 	}
 	else
 	{
-		X->next = NODE_NEW;
-		NODE_NEW->prev = X;
+		aux->next = new_node;
+		new_node->prev = aux;
 	}
 }

@@ -1,12 +1,13 @@
 #include "monty.h"
 /**
- * gl_stack - stack
- * @head: stck head
- * @count: line counter
- */
-void gl_stack(stack_t **head, unsigned int count)
+ * f_stack - prints the top
+ * @head: stack head
+ * @counter: line_number
+ * Return: no return
+*/
+void f_stack(stack_t **head, unsigned int counter)
 {
-	(void) head;
-	(void) count;
-	box.LIFO = 0
+	(void)head;
+	(void)counter;
+	bus.lifi = 0;
 }

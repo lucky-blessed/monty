@@ -1,39 +1,40 @@
 #include "monty.h"
 /**
- * gl_div - Function to divide the top two elements of the stack
+ * f_div - divides the top two elements of the stack.
  * @head: stack head
- * @count: Line number counter
- */
-void gl_div(stack_t **head, unsigned int count)
+ * @counter: line_number
+ * Return: no return
+*/
+void f_div(stack_t **head, unsigned int counter)
 {
-	stack_t *H;
-	int lent = 0, TEMP;
+	stack_t *h;
+	int len = 0, aux;
 
-	H = *head;
-	while (H)
+	h = *head;
+	while (h)
 	{
-		H = H->next;
-		lent++;
+		h = h->next;
+		len++;
 	}
-	if (lent < 2)
+	if (len < 2)
 	{
-		fprintf(stderr, "L%d: can't div, stack too short\n", count);
-		fclose(box.file);
-		free(box.content);
-		gl_stack(*head);
+		fprintf(stderr, "L%d: can't div, stack too short\n", counter);
+		fclose(bus.file);
+		free(bus.content);
+		free_stack(*head);
 		exit(EXIT_FAILURE);
 	}
-	H = *head;
-	if (H->n == 0)
+	h = *head;
+	if (h->n == 0)
 	{
-		fprintf(stderr, "L%d: division by zero\n", count);
-		fclose(box.file);
-		free(box.content);
-		gl_stack(*head);
+		fprintf(stderr, "L%d: division by zero\n", counter);
+		fclose(bus.file);
+		free(bus.content);
+		free_stack(*head);
 		exit(EXIT_FAILURE);
 	}
-	TEMP = H->next->n / H->n;
-	H->next->n = TEMP;
-	*head = H->next;
-	free(H);
+	aux = h->next->n / h->n;
+	h->next->n = aux;
+	*head = h->next;
+	free(h);
 }

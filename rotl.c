@@ -1,26 +1,26 @@
 #include "monty.h"
 /**
- * gl_rotl - Rotate the stack
- * @head: stack head
- * @count: count line
- * Return: 0
+  *f_rotl- rotates the stack to the top
+  *@head: stack head
+  *@counter: line_number
+  *Return: no return
  */
-void gl_rotl(stack_t **head, __attribute__((unused)) unsigned int count)
+void f_rotl(stack_t **head,  __attribute__((unused)) unsigned int counter)
 {
-	stack_t *TEMP = *head, *X;
+	stack_t *tmp = *head, *aux;
 
 	if (*head == NULL || (*head)->next == NULL)
 	{
 		return;
 	}
-	X = (*head)->next;
-	X->prev = NULL;
-	while (TEMP->next != NULL)
+	aux = (*head)->next;
+	aux->prev = NULL;
+	while (tmp->next != NULL)
 	{
-		TEMP = TEMP->next;
+		tmp = tmp->next;
 	}
-	TEMP->next = *head;
+	tmp->next = *head;
 	(*head)->next = NULL;
-	(*head)->prev = TEMP;
-	(*head) = X;
+	(*head)->prev = tmp;
+	(*head) = aux;
 }

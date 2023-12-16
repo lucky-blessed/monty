@@ -1,5 +1,9 @@
+#define _POSIX_C_SOURCE 200809L
+
+#include <stdio.h>
 #include "monty.h"
-box_t bx = {NULL, NULL, NULL, 0};
+
+bus_t bus = {NULL, NULL, NULL, 0};
 /**
 * main - monty code interpreter
 * @argc: number of arguments
@@ -13,7 +17,7 @@ int main(int argc, char *argv[])
 	size_t size = 0;
 	ssize_t read_line = 1;
 	stack_t *stack = NULL;
-	unsigned int count = 0;
+	unsigned int counter = 0;
 
 	if (argc != 2)
 	{
@@ -21,7 +25,7 @@ int main(int argc, char *argv[])
 		exit(EXIT_FAILURE);
 	}
 	file = fopen(argv[1], "r");
-	box.file = file;
+	bus.file = file;
 	if (!file)
 	{
 		fprintf(stderr, "Error: Can't open file %s\n", argv[1]);
@@ -31,11 +35,11 @@ int main(int argc, char *argv[])
 	{
 		content = NULL;
 		read_line = getline(&content, &size, file);
-		box.content = content;
-		count++;
+		bus.content = content;
+		counter++;
 		if (read_line > 0)
 		{
-			gl_execute(content, &stack, count, file);
+			execute(content, &stack, counter, file);
 		}
 		free(content);
 	}

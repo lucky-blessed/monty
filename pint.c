@@ -1,17 +1,18 @@
 #include "monty.h"
 /**
- * gl_pint - Function that prints the value at the top of the stack
- * @head: Stack head
- * @count: count the number of lines
- */
-void gl_pint(stack_t **head, unsigned int count)
+ * f_pint - prints the top
+ * @head: stack head
+ * @counter: line_number
+ * Return: no return
+*/
+void f_pint(stack_t **head, unsigned int counter)
 {
 	if (*head == NULL)
 	{
-		fprintf(stderr, "L%u: can't pint, stack empty\n", count);
-		fclose(box.file);
-		free(box.content);
-		gl_stack(*head);
+		fprintf(stderr, "L%u: can't pint, stack empty\n", counter);
+		fclose(bus.file);
+		free(bus.content);
+		free_stack(*head);
 		exit(EXIT_FAILURE);
 	}
 	printf("%d\n", (*head)->n);

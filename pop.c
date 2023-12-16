@@ -1,22 +1,23 @@
 #include "monty.h"
 /**
- * gl_pop - Removes the top ...
+ * f_pop - prints the top
  * @head: stack head
- * @count: cout line number
- */
-void gl_pop(stack_t **head, unsigned int count)
+ * @counter: line_number
+ * Return: no return
+*/
+void f_pop(stack_t **head, unsigned int counter)
 {
-	stack_t *H;
+	stack_t *h;
 
 	if (*head == NULL)
 	{
-		fprintf(stderr, "L%d: can't pop an empty stack\n", count);
-		fclose(box.file);
-		free(box.content);
-		gl_stack(*head);
+		fprintf(stderr, "L%d: can't pop an empty stack\n", counter);
+		fclose(bus.file);
+		free(bus.content);
+		free_stack(*head);
 		exit(EXIT_FAILURE);
 	}
-	H = *head;
-	*head = H->next;
-	free(H);
+	h = *head;
+	*head = h->next;
+	free(h);
 }

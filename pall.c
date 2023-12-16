@@ -1,19 +1,21 @@
 #include "monty.h"
 /**
- * gl_pall - Function to print the stack
- * @head: Head of the stack
- * Return: 0
- */
-void gl_pall(stack_t **head)
+ * f_pall - prints the stack
+ * @head: stack head
+ * @counter: no used
+ * Return: no return
+*/
+void f_pall(stack_t **head, unsigned int counter)
 {
-	stack_t *H;
+	stack_t *h;
+	(void)counter;
 
-	H = *head;
-	if (H == NULL)
+	h = *head;
+	if (h == NULL)
 		return;
-	while (H)
+	while (h)
 	{
-		printf("%d\n", H->n);
-		H = H->next;
+		printf("%d\n", h->n);
+		h = h->next;
 	}
 }

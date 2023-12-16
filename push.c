@@ -1,42 +1,37 @@
 #include "monty.h"
 /**
- * gl_push - function to add a node to the stack
- * @head: Head of the stack
- * @count: Counts number of line
- */
-void gl_push(stack_t **head, unsigned int count)
+ * f_push - add node to the stack
+ * @head: stack head
+ * @counter: line_number
+ * Return: no return
+*/
+void f_push(stack_t **head, unsigned int counter)
 {
-	int n, g = 0, lag = 0;
+	int n, j = 0, flag = 0;
 
-	if (box.arg)
+	if (bus.arg)
 	{
-		if (box.arg[0] == '-')
-			g++;
-		for (; box.arg[g] != '\0'; g++)
+		if (bus.arg[0] == '-')
+			j++;
+		for (; bus.arg[j] != '\0'; j++)
 		{
-			if (box.arg[g] > 57 || box.arg[g] < 48)
-				lag = 1;
-		}
-		if (lag == 1)
-		{
-			fprintf(stderr, "L%d: usage: push integer\n", count);
-			fclose(box.file);
-			free(box.content);
+			if (bus.arg[j] > 57 || bus.arg[j] < 48)
+				flag = 1; }
+		if (flag == 1)
+		{ fprintf(stderr, "L%d: usage: push integer\n", counter);
+			fclose(bus.file);
+			free(bus.content);
 			free_stack(*head);
-			exit(EXIT_FAILURE);
-		}
-	}
+			exit(EXIT_FAILURE); }}
 	else
-	{
-		fprintf(stderr, "L%d: usage: push integer\n", count);
-		fclose(box.file);
-		free(box.content);
-		gl_stack(*head);
-		exit(EXIT_FAILURE);
-	}
-	n = atoi(box.arg);
-	if (box.LIFO == 0)
-		gl_add_node(head, n);
+	{ fprintf(stderr, "L%d: usage: push integer\n", counter);
+		fclose(bus.file);
+		free(bus.content);
+		free_stack(*head);
+		exit(EXIT_FAILURE); }
+	n = atoi(bus.arg);
+	if (bus.lifi == 0)
+		addnode(head, n);
 	else
-		gl_add_queue(head, n);
-
+		addqueue(head, n);
+}
