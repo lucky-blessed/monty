@@ -1,6 +1,6 @@
 This is an ALX 0x19. C - Stacks, Queues - LIFO, FIFO project handled by Grace Obodo and Lucky Nkwor.
 
-Tasks accomplished:
+Tasks:
 0. push, pall
 mandatory
 Implement the push and pall opcodes.
@@ -11,11 +11,14 @@ The opcode push pushes an element to the stack.
 
 Usage: push <int>
 where <int> is an integer
-if <int> is not an integer or if there is no argument given to push, print the error message L<line_number>: usage: push integer, followed by a new line, and exit with the status EXIT_FAILURE
-where is the line number in the file
-You won’t have to deal with overflows. Use the atoi function
-The pall opcode
 
+if <int> is not an integer or if there is no argument given to push, print the error message L<line_number>: usage: push integer, followed by a new line, and exit with the status EXIT_FAILURE
+
+where is the line number in the file
+
+You won’t have to deal with overflows. Use the atoi function
+
+The pall opcode
 The opcode pall prints all the values on the stack, starting from the top of the stack.
 
 Usage pall
